@@ -3,470 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr. Md. Masudul Haque — Researcher & Computational Biologist</title>
+
+<!-- ============================================================
+  EDIT #1 — Page title (shows in browser tab)
+============================================================ -->
+<title>Md. Masudul Haque — Post-doctoral Researcher</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --ink: #0e1117;
-    --ink-soft: #3a3f4a;
-    --ink-muted: #7a8090;
-    --paper: #f5f3ee;
-    --paper-warm: #ede9e0;
-    --accent: #2a6b4f;
-    --accent-light: #d6ece2;
-    --accent-warm: #b35c2a;
+    --ink: #0e1117; --ink-soft: #3a3f4a; --ink-muted: #7a8090;
+    --paper: #f5f3ee; --paper-warm: #ede9e0;
+    --accent: #2a6b4f; --accent-light: #d6ece2;
     --line: rgba(14,17,23,0.1);
     --serif: 'DM Serif Display', Georgia, serif;
     --sans: 'DM Sans', system-ui, sans-serif;
     --mono: 'DM Mono', monospace;
   }
-
   html { scroll-behavior: smooth; }
-
-  body {
-    font-family: var(--sans);
-    background: var(--paper);
-    color: var(--ink);
-    font-size: 16px;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
-
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 1.1rem 3rem;
-    background: rgba(245,243,238,0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--line);
-  }
-
-  .nav-logo {
-    font-family: var(--mono);
-    font-size: 13px;
-    letter-spacing: 0.08em;
-    color: var(--accent);
-    text-decoration: none;
-  }
-
+  body { font-family: var(--sans); background: var(--paper); color: var(--ink); font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 3rem; background: rgba(245,243,238,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+  .nav-logo { font-family: var(--mono); font-size: 13px; letter-spacing: 0.08em; color: var(--accent); text-decoration: none; }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a {
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    color: var(--ink-soft);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
+  .nav-links a { font-size: 13px; font-weight: 500; letter-spacing: 0.05em; color: var(--ink-soft); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: var(--accent); }
-
-  /* ── HERO ── */
-  .hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 80px;
-  }
-
-  .hero-left {
-    padding: 5rem 4rem 4rem 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-right: 1px solid var(--line);
-  }
-
-  .hero-tag {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    color: var(--accent);
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-  }
-  .hero-tag::before {
-    content: '';
-    display: inline-block;
-    width: 24px; height: 1px;
-    background: var(--accent);
-  }
-
-  h1 {
-    font-family: var(--serif);
-    font-size: clamp(2.8rem, 5vw, 4.2rem);
-    line-height: 1.1;
-    letter-spacing: -0.01em;
-    margin-bottom: 0.3rem;
-    color: var(--ink);
-  }
-
-  .hero-subtitle {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
-    color: var(--ink-muted);
-    margin-bottom: 2rem;
-  }
-
-  .hero-bio {
-    font-size: 15px;
-    color: var(--ink-soft);
-    line-height: 1.8;
-    max-width: 460px;
-    margin-bottom: 2.5rem;
-  }
-
-  .hero-cta {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.65rem 1.4rem;
-    font-size: 13px;
-    font-weight: 500;
-    font-family: var(--sans);
-    letter-spacing: 0.04em;
-    text-decoration: none;
-    border-radius: 3px;
-    transition: all 0.2s;
-    cursor: pointer;
-    border: none;
-  }
-
-  .btn-primary {
-    background: var(--accent);
-    color: #fff;
-  }
+  .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 80px; }
+  .hero-left { padding: 5rem 4rem 4rem 3rem; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--line); }
+  .hero-tag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.15em; color: var(--accent); text-transform: uppercase; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.6rem; }
+  .hero-tag::before { content: ''; display: inline-block; width: 24px; height: 1px; background: var(--accent); }
+  h1 { font-family: var(--serif); font-size: clamp(2.8rem, 5vw, 4.2rem); line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 0.3rem; color: var(--ink); }
+  .hero-subtitle { font-family: var(--serif); font-style: italic; font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--ink-muted); margin-bottom: 2rem; }
+  .hero-bio { font-size: 15px; color: var(--ink-soft); line-height: 1.8; max-width: 460px; margin-bottom: 2.5rem; }
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.65rem 1.4rem; font-size: 13px; font-weight: 500; font-family: var(--sans); letter-spacing: 0.04em; text-decoration: none; border-radius: 3px; transition: all 0.2s; border: none; cursor: pointer; }
+  .btn-primary { background: var(--accent); color: #fff; }
   .btn-primary:hover { background: #1f5239; transform: translateY(-1px); }
-
-  .btn-outline {
-    background: transparent;
-    color: var(--ink-soft);
-    border: 1px solid var(--line);
-  }
+  .btn-outline { background: transparent; color: var(--ink-soft); border: 1px solid var(--line); }
   .btn-outline:hover { border-color: var(--ink-soft); color: var(--ink); }
-
-  .hero-right {
-    background: var(--paper-warm);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 3rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-visual {
-    position: absolute;
-    top: 3rem; right: 3rem;
-    width: 200px; height: 200px;
-    border-radius: 50%;
-    border: 1px solid var(--line);
-    display: flex; align-items: center; justify-content: center;
-    background: var(--paper);
-    overflow: hidden;
-  }
-
-  .avatar-placeholder {
-    font-family: var(--serif);
-    font-size: 4rem;
-    color: var(--accent);
-    user-select: none;
-  }
-
-  .stats-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: var(--line);
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    overflow: hidden;
-    margin-top: auto;
-  }
-
-  .stat-cell {
-    background: var(--paper-warm);
-    padding: 1.2rem 1.4rem;
-    transition: background 0.2s;
-  }
+  .hero-right { background: var(--paper-warm); display: flex; flex-direction: column; justify-content: flex-end; padding: 3rem; position: relative; overflow: hidden; }
+  .hero-visual { position: absolute; top: 3rem; right: 3rem; width: 200px; height: 200px; border-radius: 50%; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; background: var(--paper); overflow: hidden; }
+  .hero-visual img { width: 100%; height: 100%; object-fit: cover; }
+  .avatar-placeholder { font-family: var(--serif); font-size: 4rem; color: var(--accent); }
+  .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; margin-top: auto; }
+  .stat-cell { background: var(--paper-warm); padding: 1.2rem 1.4rem; transition: background 0.2s; }
   .stat-cell:hover { background: var(--paper); }
-
-  .stat-num {
-    font-family: var(--serif);
-    font-size: 2rem;
-    color: var(--ink);
-    line-height: 1;
-    margin-bottom: 0.25rem;
-  }
-
-  .stat-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    color: var(--ink-muted);
-    text-transform: uppercase;
-  }
-
-  /* ── SECTIONS ── */
-  section {
-    padding: 5rem 3rem;
-    border-top: 1px solid var(--line);
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
+  .stat-num { font-family: var(--serif); font-size: 2rem; color: var(--ink); line-height: 1; margin-bottom: 0.25rem; }
+  .stat-label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; color: var(--ink-muted); text-transform: uppercase; }
+  section { padding: 5rem 3rem; border-top: 1px solid var(--line); opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
   section.visible { opacity: 1; transform: translateY(0); }
-
   .section-inner { max-width: 900px; margin: 0 auto; }
-
-  .section-label {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    color: var(--accent);
-    text-transform: uppercase;
-    margin-bottom: 0.75rem;
-  }
-
-  h2 {
-    font-family: var(--serif);
-    font-size: clamp(1.8rem, 3vw, 2.4rem);
-    line-height: 1.2;
-    margin-bottom: 2.5rem;
-    color: var(--ink);
-  }
-
-  /* ── RESEARCH AREAS ── */
-  .research-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1px;
-    background: var(--line);
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    overflow: hidden;
-  }
-
-  .research-card {
-    background: var(--paper);
-    padding: 1.8rem 1.5rem;
-    transition: background 0.2s;
-    position: relative;
-  }
+  .section-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.15em; color: var(--accent); text-transform: uppercase; margin-bottom: 0.75rem; }
+  h2 { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.2; margin-bottom: 2.5rem; color: var(--ink); }
+  .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+  .research-card { background: var(--paper); padding: 1.8rem 1.5rem; transition: background 0.2s; }
   .research-card:hover { background: var(--accent-light); }
-
-  .research-icon {
-    font-size: 1.4rem;
-    margin-bottom: 0.75rem;
-    display: block;
-  }
-
-  .research-card h3 {
-    font-family: var(--sans);
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--ink);
-    margin-bottom: 0.4rem;
-  }
-
-  .research-card p {
-    font-size: 12px;
-    color: var(--ink-muted);
-    line-height: 1.6;
-  }
-
-  /* ── PUBLICATIONS ── */
-  .pub-list { display: flex; flex-direction: column; gap: 0; }
-
-  .pub-item {
-    padding: 1.8rem 0;
-    border-bottom: 1px solid var(--line);
-    display: grid;
-    grid-template-columns: 40px 1fr;
-    gap: 1.2rem;
-    align-items: flex-start;
-    transition: padding-left 0.2s;
-  }
+  .research-icon { font-size: 1.4rem; margin-bottom: 0.75rem; display: block; }
+  .research-card h3 { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 0.4rem; }
+  .research-card p { font-size: 12px; color: var(--ink-muted); line-height: 1.6; }
+  .pub-list { display: flex; flex-direction: column; }
+  .pub-item { padding: 1.8rem 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 40px 1fr; gap: 1.2rem; transition: padding-left 0.2s; }
   .pub-item:hover { padding-left: 0.5rem; }
   .pub-item:first-child { border-top: 1px solid var(--line); }
-
-  .pub-num {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--accent);
-    padding-top: 4px;
-    font-weight: 500;
-  }
-
-  .pub-title {
-    font-family: var(--serif);
-    font-size: 1.05rem;
-    color: var(--ink);
-    margin-bottom: 0.3rem;
-    line-height: 1.4;
-  }
-
-  .pub-authors {
-    font-size: 13px;
-    color: var(--ink-muted);
-    margin-bottom: 0.3rem;
-  }
-
-  .pub-journal {
-    font-size: 12px;
-    color: var(--accent);
-    font-style: italic;
-    font-weight: 500;
-  }
-
+  .pub-num { font-family: var(--mono); font-size: 11px; color: var(--accent); padding-top: 4px; font-weight: 500; }
+  .pub-title { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); margin-bottom: 0.3rem; line-height: 1.4; }
+  .pub-authors { font-size: 13px; color: var(--ink-muted); margin-bottom: 0.3rem; }
+  .pub-journal { font-size: 12px; color: var(--accent); font-style: italic; font-weight: 500; }
   .pub-tags { display: flex; gap: 0.5rem; margin-top: 0.6rem; flex-wrap: wrap; }
-  .pub-tag {
-    font-size: 10px;
-    font-family: var(--mono);
-    letter-spacing: 0.05em;
-    padding: 2px 8px;
-    background: var(--accent-light);
-    color: var(--accent);
-    border-radius: 2px;
-  }
-
-  /* ── CV TIMELINE ── */
+  .pub-tag { font-size: 10px; font-family: var(--mono); padding: 2px 8px; background: var(--accent-light); color: var(--accent); border-radius: 2px; }
   .timeline { position: relative; padding-left: 1.5rem; }
-  .timeline::before {
-    content: '';
-    position: absolute; left: 0; top: 8px; bottom: 0;
-    width: 1px;
-    background: var(--line);
-  }
-
-  .timeline-item {
-    position: relative;
-    padding-bottom: 2rem;
-    padding-left: 1.5rem;
-  }
-
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -1.5rem;
-    top: 8px;
-    width: 7px; height: 7px;
-    border-radius: 50%;
-    background: var(--accent);
-    border: 2px solid var(--paper);
-    outline: 1px solid var(--accent);
-  }
-
-  .timeline-date {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--accent);
-    letter-spacing: 0.08em;
-    margin-bottom: 0.3rem;
-  }
-
-  .timeline-title {
-    font-weight: 500;
-    font-size: 15px;
-    color: var(--ink);
-    margin-bottom: 0.15rem;
-  }
-
-  .timeline-place {
-    font-size: 13px;
-    color: var(--ink-muted);
-  }
-
-  /* ── CONTACT ── */
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: var(--line);
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    overflow: hidden;
-  }
-
-  .contact-card {
-    background: var(--paper);
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    text-decoration: none;
-    transition: background 0.2s;
-  }
+  .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 0; width: 1px; background: var(--line); }
+  .timeline-item { position: relative; padding-bottom: 2rem; padding-left: 1.5rem; }
+  .timeline-item::before { content: ''; position: absolute; left: -1.5rem; top: 8px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); border: 2px solid var(--paper); outline: 1px solid var(--accent); }
+  .timeline-date { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 0.08em; margin-bottom: 0.3rem; }
+  .timeline-title { font-weight: 500; font-size: 15px; color: var(--ink); margin-bottom: 0.15rem; }
+  .timeline-place { font-size: 13px; color: var(--ink-muted); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+  .contact-card { background: var(--paper); padding: 2rem; display: flex; flex-direction: column; gap: 0.4rem; text-decoration: none; transition: background 0.2s; }
   .contact-card:hover { background: var(--accent-light); }
-
-  .contact-type {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-  }
-
-  .contact-value {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--ink);
-  }
-
-  .contact-arrow {
-    font-size: 1.2rem;
-    color: var(--accent);
-    margin-top: auto;
-    transition: transform 0.2s;
-  }
+  .contact-type { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); }
+  .contact-value { font-size: 15px; font-weight: 500; color: var(--ink); }
+  .contact-arrow { font-size: 1.2rem; color: var(--accent); margin-top: auto; transition: transform 0.2s; }
   .contact-card:hover .contact-arrow { transform: translate(3px, -3px); }
-
-  /* ── FOOTER ── */
-  footer {
-    padding: 2rem 3rem;
-    border-top: 1px solid var(--line);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-    color: var(--ink-muted);
-    font-family: var(--mono);
-    letter-spacing: 0.04em;
-  }
-
-  /* ── RESPONSIVE ── */
+  footer { padding: 2rem 3rem; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--ink-muted); font-family: var(--mono); }
   @media (max-width: 720px) {
-    nav { padding: 1rem 1.25rem; }
-    .nav-links { display: none; }
+    nav { padding: 1rem 1.25rem; } .nav-links { display: none; }
     .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: 5rem 1.5rem 2.5rem; }
-    .hero-right { padding: 2rem 1.5rem; min-height: 260px; }
-    .hero-visual { width: 120px; height: 120px; top: 1.5rem; right: 1.5rem; }
-    .avatar-placeholder { font-size: 2.5rem; }
-    section { padding: 3.5rem 1.5rem; }
-    .contact-grid { grid-template-columns: 1fr; }
+    .hero-left { padding: 5rem 1.5rem 2.5rem; } .hero-right { padding: 2rem 1.5rem; min-height: 260px; }
+    .hero-visual { width: 120px; height: 120px; top: 1.5rem; right: 1.5rem; } .avatar-placeholder { font-size: 2.5rem; }
+    section { padding: 3.5rem 1.5rem; } .contact-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 0.5rem; text-align: center; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ============================================================
+  EDIT #2 — Short name shown top-left in the nav bar
+============================================================ -->
 <nav>
-  <a class="nav-logo" href="#">[YourName].bio</a>
+  <a class="nav-logo" href="#">masud-haque.bio</a>
   <ul class="nav-links">
     <li><a href="#research">Research</a></li>
     <li><a href="#publications">Publications</a></li>
@@ -475,101 +112,145 @@
   </ul>
 </nav>
 
-<!-- HERO -->
+
+<!-- =====================================================
+  HERO — First section visitors see
+======================================================== -->
 <div class="hero">
   <div class="hero-left">
+
+    <!-- EDIT #3 — Your role label (e.g. "Assistant Professor", "PhD Candidate") -->
     <span class="hero-tag">Post-doctoral Researcher</span>
-    <h1>Dr. [Your<br>Full Name]</h1>
+
+    <!-- EDIT #4 — Your name. Move <br> to break the line where you like -->
+    <h1>Md. Masudul<br>Haque</h1>
+
+    <!-- EDIT #5 — One-line tagline under your name -->
     <p class="hero-subtitle">Computational biologist & molecular scientist</p>
+
+    <!-- EDIT #6 — 2–3 sentences describing your research -->
     <p class="hero-bio">
-      I study gene expression landscapes using RNA-seq and multi-omics approaches to understand inflammatory disease and cancer biology. My work sits at the intersection of wet-lab immunology and computational data science.
+      I study gene expression landscapes using RNA-seq and multi-omics approaches
+      to understand inflammatory disease and cancer biology. My work bridges
+      wet-lab immunology and computational data science at
+      Kyungpook National University, Daegu, South Korea.
     </p>
+
     <div class="hero-cta">
       <a class="btn btn-primary" href="#publications">View publications</a>
       <a class="btn btn-outline" href="#contact">Get in touch</a>
     </div>
   </div>
+
   <div class="hero-right">
+
+    <!-- EDIT #7 — Profile photo
+         OPTION A (no photo): keep as is — shows a circle placeholder
+         OPTION B (add photo): upload photo.jpg to GitHub, then:
+           DELETE this line:   <span class="avatar-placeholder">◎</span>
+           ADD this line:      <img src="photo.jpg" alt="Md. Masudul Haque">
+    -->
     <div class="hero-visual">
       <span class="avatar-placeholder">◎</span>
     </div>
+
+    <!-- EDIT #8 — Replace 0 with your real numbers in each box -->
     <div class="stats-grid">
       <div class="stat-cell">
-        <div class="stat-num">[N]</div>
+        <div class="stat-num">0</div>    <!-- EDIT: total publications -->
         <div class="stat-label">Publications</div>
       </div>
       <div class="stat-cell">
-        <div class="stat-num">[N]</div>
+        <div class="stat-num">0</div>    <!-- EDIT: total citations -->
         <div class="stat-label">Citations</div>
       </div>
       <div class="stat-cell">
-        <div class="stat-num">[N]</div>
+        <div class="stat-num">0</div>    <!-- EDIT: years of research -->
         <div class="stat-label">Years research</div>
       </div>
       <div class="stat-cell">
-        <div class="stat-num">[N]</div>
+        <div class="stat-num">0</div>    <!-- EDIT: number of collaborators -->
         <div class="stat-label">Collaborators</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- RESEARCH -->
+
+<!-- ============================================================
+  SECTION 1 — RESEARCH AREAS
+  EDIT #9 — Change the title, emoji, or description of each card
+  To ADD a card: copy one <div class="research-card"> block, paste below
+  To REMOVE a card: delete the whole <div class="research-card"> block
+============================================================ -->
 <section id="research">
   <div class="section-inner">
     <div class="section-label">01 — Research focus</div>
     <h2>What I study</h2>
     <div class="research-grid">
+
       <div class="research-card">
         <span class="research-icon">🧬</span>
         <h3>RNA-seq & Transcriptomics</h3>
         <p>Bulk and single-cell RNA sequencing to decode gene expression changes in disease contexts</p>
       </div>
+
       <div class="research-card">
         <span class="research-icon">🔥</span>
         <h3>Immunology & Inflammation</h3>
         <p>Molecular mechanisms of immune activation, cytokine signalling, and inflammatory pathways</p>
       </div>
+
       <div class="research-card">
         <span class="research-icon">⚗️</span>
         <h3>Cancer Biology</h3>
         <p>Tumour microenvironment characterisation and biomarker discovery using multi-omics</p>
       </div>
+
       <div class="research-card">
         <span class="research-icon">💻</span>
         <h3>Computational Biology</h3>
         <p>Building bioinformatics pipelines using DESeq2, edgeR, Seurat, STAR, and Salmon</p>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- PUBLICATIONS -->
+
+<!-- ============================================================
+  SECTION 2 — PUBLICATIONS
+  EDIT #10 — Replace placeholder text with your real paper details
+  To ADD a paper: copy one <!-- Publication --> block, paste below the last one
+  To REMOVE a paper: delete the whole <div class="pub-item"> block
+============================================================ -->
 <section id="publications">
   <div class="section-inner">
     <div class="section-label">02 — Selected publications</div>
     <h2>Research output</h2>
     <div class="pub-list">
 
+      <!-- Publication 1 -->
       <div class="pub-item">
         <span class="pub-num">01</span>
         <div>
-          <div class="pub-title">[Your Publication Title Here]</div>
-          <div class="pub-authors">[Your Name], Author B, Author C et al.</div>
-          <div class="pub-journal">[Journal Name] · [Year] · doi:[xxx]</div>
+          <div class="pub-title">Your First Paper Title</div>               <!-- EDIT -->
+          <div class="pub-authors">Haque MM, Author B, Author C et al.</div> <!-- EDIT -->
+          <div class="pub-journal">Journal Name · Year · doi:XXXXXXX</div>  <!-- EDIT -->
           <div class="pub-tags">
-            <span class="pub-tag">RNA-seq</span>
+            <span class="pub-tag">RNA-seq</span>        <!-- EDIT: topic keywords -->
             <span class="pub-tag">Inflammation</span>
           </div>
         </div>
       </div>
 
+      <!-- Publication 2 -->
       <div class="pub-item">
         <span class="pub-num">02</span>
         <div>
-          <div class="pub-title">[Your Second Publication Title]</div>
-          <div class="pub-authors">[Your Name], Author D, Author E et al.</div>
-          <div class="pub-journal">[Journal Name] · [Year] · doi:[xxx]</div>
+          <div class="pub-title">Your Second Paper Title</div>              <!-- EDIT -->
+          <div class="pub-authors">Haque MM, Author D, Author E et al.</div><!-- EDIT -->
+          <div class="pub-journal">Journal Name · Year · doi:XXXXXXX</div> <!-- EDIT -->
           <div class="pub-tags">
             <span class="pub-tag">Transcriptomics</span>
             <span class="pub-tag">Cancer</span>
@@ -577,12 +258,13 @@
         </div>
       </div>
 
+      <!-- Publication 3 -->
       <div class="pub-item">
         <span class="pub-num">03</span>
         <div>
-          <div class="pub-title">[Your Third Publication Title]</div>
-          <div class="pub-authors">[Your Name], Author F et al.</div>
-          <div class="pub-journal">[Journal Name] · [Year] · doi:[xxx]</div>
+          <div class="pub-title">Your Third Paper Title</div>               <!-- EDIT -->
+          <div class="pub-authors">Haque MM, Author F et al.</div>          <!-- EDIT -->
+          <div class="pub-journal">Journal Name · Year · doi:XXXXXXX</div>  <!-- EDIT -->
           <div class="pub-tags">
             <span class="pub-tag">Bioinformatics</span>
             <span class="pub-tag">Computational</span>
@@ -594,76 +276,104 @@
   </div>
 </section>
 
-<!-- CV -->
+
+<!-- ============================================================
+  SECTION 3 — CV TIMELINE
+  EDIT #11 — Fill in your real dates, degrees, and universities
+  To ADD an entry: copy one <div class="timeline-item"> block
+  To REMOVE an entry: delete the whole block
+============================================================ -->
 <section id="cv">
   <div class="section-inner">
     <div class="section-label">03 — Curriculum vitae</div>
     <h2>Academic journey</h2>
     <div class="timeline">
 
+      <!-- Current role — already filled -->
       <div class="timeline-item">
-        <div class="timeline-date">20XX — Present</div>
+        <div class="timeline-date">20XX — Present</div>              <!-- EDIT: start year -->
         <div class="timeline-title">Post-doctoral Researcher</div>
-        <div class="timeline-place">[Your University / Institute] — [City, Country]</div>
+        <div class="timeline-place">Kyungpook National University — Daegu, South Korea</div>
       </div>
 
+      <!-- PhD -->
       <div class="timeline-item">
-        <div class="timeline-date">20XX — 20XX</div>
-        <div class="timeline-title">Ph.D. in [Field]</div>
-        <div class="timeline-place">[University name] — Thesis: "[Your thesis title]"</div>
+        <div class="timeline-date">20XX — 20XX</div>                 <!-- EDIT: PhD years -->
+        <div class="timeline-title">Ph.D. in [Your Field]</div>      <!-- EDIT -->
+        <div class="timeline-place">[University] — Thesis: "[Your thesis title]"</div> <!-- EDIT -->
       </div>
 
+      <!-- MSc -->
       <div class="timeline-item">
-        <div class="timeline-date">20XX — 20XX</div>
-        <div class="timeline-title">M.Sc. in [Field]</div>
-        <div class="timeline-place">[University name]</div>
+        <div class="timeline-date">20XX — 20XX</div>                 <!-- EDIT: MSc years -->
+        <div class="timeline-title">M.Sc. in [Your Field]</div>      <!-- EDIT -->
+        <div class="timeline-place">[University name]</div>           <!-- EDIT -->
       </div>
 
+      <!-- BSc -->
       <div class="timeline-item">
-        <div class="timeline-date">20XX — 20XX</div>
-        <div class="timeline-title">B.Sc. in [Field]</div>
-        <div class="timeline-place">[University name]</div>
+        <div class="timeline-date">20XX — 20XX</div>                 <!-- EDIT: BSc years -->
+        <div class="timeline-title">B.Sc. in [Your Field]</div>      <!-- EDIT -->
+        <div class="timeline-place">[University name]</div>           <!-- EDIT -->
       </div>
 
     </div>
     <br>
-    <a class="btn btn-outline" href="[link-to-your-cv.pdf]" target="_blank">Download full CV (PDF) ↓</a>
+    <!-- EDIT #12 — Upload your CV as cv.pdf to GitHub, or change the href to a Google Drive link -->
+    <a class="btn btn-outline" href="cv.pdf" target="_blank">Download full CV (PDF) ↓</a>
   </div>
 </section>
 
-<!-- CONTACT -->
+
+<!-- ============================================================
+  SECTION 4 — CONTACT LINKS
+  EDIT #13 — Update Google Scholar URL with your real profile link
+  Email and GitHub are already filled with your real details
+============================================================ -->
 <section id="contact">
   <div class="section-inner">
     <div class="section-label">04 — Get in touch</div>
     <h2>Let's connect</h2>
     <div class="contact-grid">
-      <a class="contact-card" href="mailto:your.email@institution.ac.kr">
+
+      <!-- Email — already filled -->
+      <a class="contact-card" href="mailto:masud.biochem.cu@gmail.com">
         <span class="contact-type">Email</span>
-        <span class="contact-value">your.email@institution.ac.kr</span>
+        <span class="contact-value">masud.biochem.cu@gmail.com</span>
         <span class="contact-arrow">→</span>
       </a>
-      <a class="contact-card" href="https://scholar.google.com/citations?user=YOURID" target="_blank">
+
+      <!-- EDIT #14 — Go to your Google Scholar profile, copy the full URL, paste it in href="..." -->
+      <a class="contact-card" href="https://scholar.google.com/citations?user=PASTE_YOUR_ID_HERE" target="_blank">
         <span class="contact-type">Google Scholar</span>
-        <span class="contact-value">View publications →</span>
+        <span class="contact-value">View my publications →</span>
         <span class="contact-arrow">→</span>
       </a>
-      <a class="contact-card" href="https://github.com/yourusername" target="_blank">
+
+      <!-- GitHub — already filled with your username masud-l -->
+      <a class="contact-card" href="https://github.com/masud-l" target="_blank">
         <span class="contact-type">GitHub</span>
-        <span class="contact-value">@yourusername</span>
+        <span class="contact-value">@masud-l</span>
         <span class="contact-arrow">→</span>
       </a>
-      <a class="contact-card" href="[your-institution-page]" target="_blank">
-        <span class="contact-type">Lab / Institution</span>
-        <span class="contact-value">[Lab name, University]</span>
+
+      <!-- EDIT #15 — Your lab or department page. Or delete this card if not needed -->
+      <a class="contact-card" href="https://knu.ac.kr" target="_blank">
+        <span class="contact-type">Institution</span>
+        <span class="contact-value">Kyungpook National University</span>
         <span class="contact-arrow">→</span>
       </a>
+
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+
+<!-- ============================================================
+  FOOTER — EDIT #16 if you want to change the year or text
+============================================================ -->
 <footer>
-  <span>© 2026 Dr. [Your Name]</span>
+  <span>© 2026 Md. Masudul Haque</span>
   <span>Built with intention · Hosted on GitHub Pages</span>
 </footer>
 
